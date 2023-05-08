@@ -37,11 +37,19 @@ function App() {
     setRightTableData(randomizedQuestions);
   };
   const handleRotateButtonClick = () => {
-    const rotatedQuestions = rotateFun(
-      [...rightTableData],
-      rightTableData.length
-    );
-    setRightTableData(rotatedQuestions);
+    if (rightTableData.length === 0) {
+      const rotatedQuestions = rotateFun(
+        [...leftTableData],
+        leftTableData.length
+      );
+      setRightTableData(rotatedQuestions);
+    } else {
+      const rotatedQuestions = rotateFun(
+        [...rightTableData],
+        rightTableData.length
+      );
+      setRightTableData(rotatedQuestions);
+    }
     setRotationCount(rotationCount + 1);
   };
 
