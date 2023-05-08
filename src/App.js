@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "./styles.css";
 import Data from "./Data.js";
 import { rotateFun } from "./rotation";
@@ -18,7 +18,10 @@ function App() {
       );
     return questions;
   };
-
+useEffect(() => {
+    setRightTableData([]); // Clear right table data when subject changes
+  }, [selectedSubject]);
+  
   const handleDropdownChange = (event) => {
     const selectedSubject = event.target.value;
     setSelectedSubject(selectedSubject);
