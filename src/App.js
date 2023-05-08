@@ -61,7 +61,7 @@ function App() {
         <table>
           <thead>
             <tr>
-              <th>Left Table</th>
+              <th>Question Bank</th>
             </tr>
           </thead>
           <tbody>
@@ -76,7 +76,7 @@ function App() {
         <table>
           <thead>
             <tr>
-              <th>Right Table</th>
+              <th>Question</th>
             </tr>
           </thead>
           <tbody>
