@@ -8,8 +8,9 @@ function App() {
   const [selectedSubject, setSelectedSubject] = useState("");
   const [leftTableData, setLeftTableData] = useState([]);
   const [rightTableData, setRightTableData] = useState([]);
-  const [rotationCount, setRotationCount] = useState(0); // Add rotationCount state variable
-
+  const [rotationCount, setRotationCount] = useState(0);
+  
+  
   const generateQuestionsArray = (subject) => {
     const questions = Array(10)
       .fill("")
@@ -33,12 +34,16 @@ useEffect(() => {
   const handleCopyButtonClick = () => {
     setRightTableData([...leftTableData]);
   };
+  
+  //randomize button click function
   const handleRandomizeButtonClick = () => {
     const randomizedQuestions = [...leftTableData].sort(
       () => Math.random() - 0.5
     );
     setRightTableData(randomizedQuestions);
   };
+  
+  //Rotate button click function
   const handleRotateButtonClick = () => {
     if (rightTableData.length === 0) {
       const rotatedQuestions = rotateFun(
