@@ -90,7 +90,7 @@ function App() {
       </div>
 
       <div className="button-container">
-        <button onClick={handleCopyButtonClick}>Copy to Right Table</button>
+        <button onClick={handleCopyButtonClick}>Question Sequence </button>
         <button onClick={handleRotateButtonClick}>Rotate</button>
         <button onClick={handleRandomizeButtonClick}>Randomize</button>
       </div>
