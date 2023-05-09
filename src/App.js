@@ -63,6 +63,7 @@ useEffect(() => {
 
   return (
     <div className="App">
+    <h1 style={{ color: "green", fontSize: "18px", textAlign: "center" }}>BISHOP HEBER SCHOOL</h1>
       <div className="dropdown">
         <select value={selectedSubject} onChange={handleDropdownChange}>
           <option value="">Select a subject</option>
