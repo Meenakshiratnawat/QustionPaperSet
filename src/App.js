@@ -63,7 +63,7 @@ useEffect(() => {
 
   return (
     <div className="App">
-    <h1 style={{ color: "green", fontSize: "18px", textAlign: "center" }}>BISHOP HEBER SCHOOL</h1>
+      <h1 className="app-title">BISHOP HEBER SCHOOL</h1>
       <div className="dropdown">
         <select value={selectedSubject} onChange={handleDropdownChange}>
           <option value="">Select a subject</option>
@@ -75,7 +75,7 @@ useEffect(() => {
         </select>
       </div>
       <div className="table-container">
-        <table>
+        <table className="question-table">
           <thead>
             <tr>
               <th>Question Bank</th>
@@ -90,7 +90,7 @@ useEffect(() => {
           </tbody>
         </table>
 
-        <table>
+        <table className="question-table">
           <thead>
             <tr>
               <th>Question</th>
@@ -107,9 +107,15 @@ useEffect(() => {
       </div>
 
       <div className="button-container">
-        <button onClick={handleCopyButtonClick}>Question Sequence </button>
-        <button onClick={handleRotateButtonClick}>Rotate</button>
-        <button onClick={handleRandomizeButtonClick}>Randomize</button>
+        <button onClick={handleCopyButtonClick} className="action-button">
+          Question Sequence
+        </button>
+        <button onClick={handleRotateButtonClick} className="action-button">
+          Rotate
+        </button>
+        <button onClick={handleRandomizeButtonClick} className="action-button">
+          Randomize
+        </button>
       </div>
     </div>
   );
