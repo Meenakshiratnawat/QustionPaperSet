@@ -62,3 +62,28 @@
 .action-button:last-child {
   margin-right: 0;
 }
+
+/* Media query for screens up to 600px */
+@media only screen and (max-width: 600px) {
+  .App {
+    padding: 10px;
+  }
+
+  .app-title {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+
+  .button-container {
+    flex-wrap: wrap;
+  }
+
+  .action-button {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  .action-button:last-child {
+    margin-right: 0;
+  }
+}
